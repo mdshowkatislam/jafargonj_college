@@ -9,7 +9,7 @@
 <div class="container">
     <div class="row d-flex justify-content-center">
         <div class="text-center site-heading">
-            <h2 class="custom-font-titillium-web ">Jafargonj Mir Abdul Gafur College</h2>
+            <h2 class="custom-font-titillium-web mycolorgreen">Jafargonj Mir Abdul Gafur College</h2>
         </div>
     </div>
 </div>

@@ -56,8 +56,8 @@
     width: 100%;
 }
 </style>
-<div class="event-area flex-less">
-    <div class="container">
+<div class="event-area flex-less mb-5">
+    <div class="container mb-5">
         <div class="row">
             {{-- @if (!empty($events) && $events->count()) --}}
                 <div class="col-sm-12 col-md-12 col-lg-8">
@@ -66,7 +66,7 @@
                     </div> --}}
 
                     <div class="d-flex justify-content-between align-items-end">
-                        <h1 class="text-uppercase mb-0 home-content-heading custom-font-titillium-web">Recent and Upcoming Events</h1>
+                        <h1 class="text-uppercase mb-0 home-content-heading custom-font-titillium-web mycolorgreen">Recent and Upcoming Events</h1>
                         {{-- <a href="" class="text-uppercase text-decoration-none fw-bold common-font-color">All</a> --}}
                     </div>
                 
@@ -175,7 +175,7 @@
                     </div> --}}
 
                     <div class="d-flex justify-content-between align-items-end">
-                        <h1 class="text-uppercase mb-0 home-content-heading custom-font-titillium-web">Notices</h1>
+                        <h1 class="text-uppercase mb-0 home-content-heading custom-font-titillium-web mycolorgreen">Notices</h1>
                         {{-- <a href="" class="text-uppercase text-decoration-none fw-bold common-font-color">All</a> --}}
                     </div>
                     

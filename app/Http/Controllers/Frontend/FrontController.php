@@ -329,6 +329,7 @@ class FrontController extends Controller
     }
 
     public function singlePage(Request $request){
+        
         $data['banner'] = $this->bannerService->bannerByRefId(1);
         $data['custom_data'] = CmsComponent::find($request->id);
         //dd($data['custom_data']);

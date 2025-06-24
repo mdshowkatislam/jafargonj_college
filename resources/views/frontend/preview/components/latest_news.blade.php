@@ -63,7 +63,7 @@
     <div class="blog-area bottom-less">
         <div class="container text-center">
             <div class="d-flex justify-content-between align-items-end">
-                <h1 class="text-uppercase mb-0 home-content-heading custom-font-titillium-web">Latest News</h1>
+                <h1 class="text-uppercase mb-0 home-content-heading custom-font-titillium-web mycolorgreen">Latest News</h1>
                 {{-- <a href="" class="text-uppercase text-decoration-none fw-bold common-font-color">All</a> --}}
             </div>
         

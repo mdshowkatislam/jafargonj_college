@@ -729,8 +729,8 @@ input {
 .btn-theme.effect:focus {
   background: blueviolet;
   /* border: 2px solid var(--heading_color); */
-  border: 2px solid yellow;
-  color: black!important;
+  border: 2px solid rgb(43, 0, 255);
+  color: rgb(73, 59, 146) !important;
 }
 
 .btn.btn-dark-mix {
@@ -979,7 +979,7 @@ nav.navbar.bootsnav.sticked .attr-nav.social li {
 }
 
 .common-bg-color {
-  background: #1bcc7a !important;
+  background: #1BCC7A !important;
   /* background-color: #1bcc7a; */
 }
 

@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master-landing')
 @php
-$page_title = 'Butex Short History';
+$page_title = 'Jafargonj Mir Abdul Gafur College Short History';
 @endphp
 @section('title')
 {{ $page_title }}
