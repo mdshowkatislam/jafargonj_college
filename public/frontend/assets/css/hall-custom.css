@@ -1,0 +1,14 @@
+.control_btn{
+    background: none;
+    border: none;
+    color: white;
+}
+.notice-title {
+    background-color: #00c5bf;
+    padding: 5px;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: "Raleway", sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+  }

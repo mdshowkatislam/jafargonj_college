@@ -1,0 +1,300 @@
+
+ul {
+    margin: 0;
+    list-style-type: none;
+}
+
+a,
+a:active,
+a:focus,
+a:hover {
+    outline: none;
+    text-decoration: none;
+    color: #002147;
+}
+
+a:hover {
+    color: #002147;
+}
+
+a {
+    transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -ms-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+}
+
+/* header start */
+.header .nav {
+    width: 100%;
+    position: absolute;
+    top: 0; 
+    padding-top: 10px;
+    padding-bottom: 20px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    z-index: 9999;
+}
+
+.header .affix {
+    padding: 0;
+    background-color: #fff;
+}
+
+.header .affix .navbar-light .navbar-nav .nav-link {
+    color: black;
+}
+
+.header .affix .navbar-light .navbar-brand {
+    color: black;
+}
+
+.header .affix .navbar .search_icon-color {
+    color: #000;
+}
+
+
+
+.header .navbar .navbar-brand .main-logo {
+    max-width: 450px;
+    height: 65px;
+}
+
+.header .navbar .dropdown-toggle::after {
+    display: inline-block;
+    width: 0.5em;
+    height: 0.5em;
+    vertical-align: middle;
+    content: "";
+    border: 0.3em solid;
+    border-width: 0 0.15em 0.15em 0;
+    transform: rotateZ(45deg);
+    margin-top: -0.3rem;
+}
+
+.header .navbar .dropdown-mega .dropdown-menu {
+    width: 100%;
+    background: white;
+}
+
+.header .navbar .search-icon-style {
+    padding-left: 100px;
+}
+
+.header .navbar .dropdown-mega .dropdown-menu ul li {
+    border-bottom: medium none;
+    color: #002147;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 0;
+    text-align: left;
+    width: 100%;
+}
+
+.header .navbar .dropdown-mega .dropdown-menu ul li a:hover {
+    color: #56CCC8;
+    padding-left: 10px;
+}
+
+.header .navbar ul li a {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+.header .navbar-light .navbar-nav .nav-link{
+    color: rgb(0, 0, 0);
+}
+
+.header .navbar .dropdown-mega .dropdown-menu ul li:first-child {
+    color: #56CCC8 !important;
+    font-weight: normal;
+    line-height: 1.2;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0;
+    font-weight: 600;
+    margin-top: 0;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.header .navbar .dropdown-mega:hover .dropdown-menu {
+    width: 100%;
+    display: block;
+    left: 0;
+}
+
+
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.header .navbar .dropdown-menu {
+    display: none;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0.8s, opacity 0.8s ease;
+}
+
+.header .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    animation: slideDown 1s ease forwards;
+}
+
+/* ------------------------------ */
+.header .navbar .dropdown-single .dropdown-menu {
+    min-width: 270px;
+    padding: 10px;
+}
+
+.header .navbar .dropdown-single ul li a {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.06em !important;
+    text-transform: uppercase !important;
+}
+
+.header .navbar .dropdown-single ul li a:hover {
+    color: #56CCC8 !important;
+    padding-left: 10px !important;
+}
+
+.header .navbar .dropdown-single:hover .dropdown-menu {
+    width: 100% !important;
+    display: block !important;
+    /* left: 0 !important; */
+    right: 0px !important;
+}
+
+.header .navbar .top-search {
+    background-color: #ffffff;
+    border: medium none;
+    border-radius: 10px;
+    box-shadow: 0 10px 40px -15px rgba(0, 0, 0, 0.5);
+    z-index: 99;
+    border: 1px solid #e7e7e7;
+    background: linear-gradient(90deg, rgba(0, 33, 71, 1) 0%, rgba(6, 63, 130, 1) 49%);
+    z-index: 9999;
+    position: fixed;
+    right: 15%;
+}
+
+.header .navbar .top-search .search input {
+    background-color: white;
+    border: medium none !important;
+    box-shadow: inherit;
+    color: #1c1c1c;
+    padding: 0 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.header .navbar .search_icon-color {
+    color: white;
+}
+
+.header .navbar .search_input {
+    border-radius: 10px;
+    background: #fdfdfd;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25) inset;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 400px;
+
+}
+
+
+
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+    .header .navbar .navbar-brand .main-logo {
+        width: 250px;
+        height: 50px;
+    }
+
+    .header .navbar .dropdown-single:hover .dropdown-menu {
+        /* width: 100% !important; */
+        display: block !important;
+        /* left: 0px !important; */
+        right: 0 !important;
+        /* display: none !important; */
+    }
+
+    .header .navbar .top-search {
+        right: 10%;
+    }
+
+    .header .navbar .search-icon-style {
+        padding-left: 0px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+    .header .navbar .search-icon-style {
+        padding-left: 10px;
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+    .header .navbar .search-icon-style {
+        padding-left: 10px;
+    }
+}
+
+@media screen and (min-width: 376px) and (max-width: 575.98px) {
+    .header .navbar .search-icon-style {
+        padding-left: 10px;
+    }
+
+    .header .navbar .navbar-brand .main-logo {
+        width: 250px;
+        height: 50px;
+    }
+
+    .header .navbar .top-search {
+        right: 4%;
+    }
+
+    .header .navbar .search_input {
+        width: 320px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 375.98px) {
+    .header .navbar .search-icon-style {
+        padding-left: 10px;
+    }
+
+    .header .navbar .navbar-brand .main-logo {
+        width: 250px;
+        height: 50px;
+    }
+
+    .header .navbar .top-search {
+        right: 2%;
+    }
+
+    .header .navbar .search_input {
+        width: 320px;
+    }
+}

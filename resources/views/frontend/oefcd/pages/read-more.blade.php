@@ -1,0 +1,24 @@
+@extends('frontend.oefcd.landing')
+
+@section('content')
+    @include('frontend.partials.sections.banner_oefcd', ['page_title' => 'OFECD Message'])
+    <!-- Profile -->
+    <section class="container">
+        <div class="container profile">
+            <div class="row my-5">
+                <div class="col-12">
+                    <div class="bg-light p-3 rounded shadow">
+                        @if (@$message['short_description'])
+                            <a href="{{ route('office.people.details', @$message->profile_id) }}"
+                                class="fs-4 fw-bold  pb-3 mb-3 common-font-color">{{ @$message['profile']['nameEn'] }}</a>
+                            <h2 class="fs-5 fw-bold text-primary">{{ @$message['profile']['designation'] }}</h2>
+                            <div class="text-justify fs-6 mt-3">
+                                {!! @$message['short_description'] !!}
+                            </div>
+                        @endif
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+@endsection

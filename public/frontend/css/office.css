@@ -1,0 +1,184 @@
+.page-header {
+    border: 0;
+    margin-bottom: 40px;
+}
+#content .page-header .page-title {
+    font-family: "Titillium Web", sans-serif;
+    font-size: 30px;
+    color: #090909;
+    text-transform: uppercase;
+    margin: 0;
+    line-height: 30px;
+}
+.page-header hr {
+    border-width: 4px 0 0;
+    border-color: #a7a7a7;
+    margin-bottom: 0;
+    margin-top: 15px;
+}
+.breadcrumb > li + li::before {
+    content: "/\00a0";
+    padding: 0 5px;
+    color: #ccc;
+}
+.pull-left {
+    float: left !important;
+}
+#slidebar-left .widget.widget_subpages {
+    border: 1px solid #a7a7a7;
+    margin-bottom: 30px;
+    padding: 16px 24px;
+}
+#slidebar-left .widget.widget_subpages .widget-title {
+    border-bottom: 2px solid #047C3B;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 0 0 5px;
+    padding: 0 0 8px;
+    text-transform: uppercase;
+}
+#slidebar-left .widget.widget_subpages ul {
+    margin: 0;
+    padding: 0;
+}
+#slidebar-left .widget.widget_subpages ul li {
+    display: block;
+    list-style: outside none none;
+    position: relative;
+}
+#slidebar-left .widget.widget_subpages ul li a {
+    border-color: #eee;
+    border-style: solid;
+    border-width: 0 0 1px;
+    display: block;
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 8px 0 8px 15px;
+    position: relative;
+    text-decoration: none;
+    color: #000;
+}
+#slidebar-left .widget.widget_subpages ul li.widget_subpages_current_page a, #slidebar-left .widget.widget_subpages ul li > a:hover {
+    color: #047c3b;
+}
+#slidebar-left .widget.widget_theme_notices_widget .notice-widget {
+    background: #b0afaf;
+    margin-bottom: 25px;
+}
+#slidebar-left .widget.widget_theme_notices_widget .notice-widget .widget-title {
+    background: #2e363e;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 0;
+}
+.notice-widget .widget-title {
+    background: #f68b1f;
+    color: #fff;
+    padding: 6px 19px;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    margin-top: 0;
+}
+.content.notices {
+    max-height: 448px;
+}
+#slidebar-left .widget.widget_theme_notices_widget .notice-widget .content .notice {
+    margin-bottom: 0;
+    border-top: 0;
+    padding-top: 10px;
+}
+#slidebar-left .widget.widget_theme_notices_widget .notice-widget .content .notice {
+    background: transparent;
+}
+#slidebar-left .content .notice {
+    height: auto;
+}
+.content .notice {
+    background: #ececec;
+    padding-left: 30px;
+    padding-top: 6px;
+    padding-bottom: 0;
+    padding-right: 10px;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    color: #232323;
+    margin-bottom: 7px;
+    position: relative;
+    height: 107px;
+    overflow: hidden;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+}
+/* RIGHT SIDE */
+.pull-right {
+    float: right !important;
+}
+#content article:last-child {
+    border-bottom: none !important; 
+    padding-top: 0;
+}
+.page .entry-content p, .page .entry-content {
+    color: #232323;
+    font-size: 14.5px;
+    font-weight: 300;
+    line-height: 30px;
+    text-align: justify;
+}
+.subpage-items {
+    margin-bottom: 30px;
+} 
+.subpage-items .page-link {
+    border: 1px solid #d8d8d8;
+    display: table;
+    position: relative;
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #404040;
+    text-decoration: none !important;
+    text-align: center;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+}
+.subpage-items .page-link:hover {
+    background: rgba(0,0,0,.1);
+}
+.subpage-items .page-link:hover {
+    color: #047c3b;
+    border-color: #e5e5e5;
+}
+.subpage-items .page-link .sr {
+    display: table-cell;
+    height: 80px;
+    padding: 0 25px;
+    vertical-align: middle;
+}
+.subpage-items .page-link::after {
+    content: "+";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 26px;
+    line-height: 26px;
+    height: 26px;
+    text-align: center;
+    color: #FFF;
+    background: #047C3B;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    font-size: 30px;
+    font-weight: 400;
+}
+.subpage-items .page-link:hover::after {
+    background: #7c7c7c;
+}

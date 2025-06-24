@@ -1,0 +1,74 @@
+.about-vc{
+    padding-top: 50px;
+    padding-bottom: 30px;
+    background: #FFFFFF;
+}
+.biography{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #FFFFFF;
+    }
+    .box{
+        margin-top: 40px;
+        padding: 58px 30px 15px 34px;
+        background: #FFFFFF;
+        border: 1px solid #00c5bf;
+        /* Effect-1 */
+
+        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+    }
+    .box .paragraph{
+        text-align: justify;
+    }
+    .title{
+        background: #00c5bf;
+        position: absolute;
+        width: 65%;
+        height: 56px;
+        left: -28px;
+        top: -24px;
+        box-shadow: 0px 1px 10px rgb(0 0 0 / 10%);
+        color: #FFFFFF;
+        padding-left: 21px;
+    }
+    .office-vice-chancelor{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background: #f5f5f5;
+    }
+    .contact-us{
+        padding-top: 35px;
+        padding-bottom: 35px;
+        background: #fff;
+    }
+    .contact-card{
+        background: #FFFFFF;
+        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.1);
+    }
+    .inner-items-contact{
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .inner-items-contact h5{
+       padding: 18px;
+       font-size: 30px!important;
+    }
+
+    @media (max-width: 575px){
+        .title{
+            background: #00c5bf;
+            position: absolute;
+            width: 100%;
+            height: 56px;
+            left: 0px;
+            top: -24px;
+            box-shadow: 0px 1px 10px rgb(0 0 0 / 10%);
+            color: #FFFFFF;
+            padding-left: 21px;
+            padding-top: 12px;
+        }
+    }
