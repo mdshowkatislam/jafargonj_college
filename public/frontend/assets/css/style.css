@@ -335,6 +335,7 @@ strong {
 .btn:focus,
 .btn:hover {
   outline: 0;
+  background-color: #5cd19b !important;
 }
 
 .btn.circle {
@@ -569,6 +570,7 @@ input {
   font-weight: 700;
   letter-spacing: 1px;
   overflow: hidden;
+  border-color:#5cd19b !important;
 }
 
 .btn-sm {
@@ -979,7 +981,7 @@ nav.navbar.bootsnav.sticked .attr-nav.social li {
 }
 
 .common-bg-color {
-  background: #1BCC7A !important;
+  background: #5cd19b !important;
   /* background-color: #1bcc7a; */
 }
 

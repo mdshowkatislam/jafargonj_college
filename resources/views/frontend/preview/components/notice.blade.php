@@ -19,7 +19,7 @@
                         </li>
                         <li>
                             <a href="{{ route('type.details', ['id' => $item->id, 'type' => 'notice']) }}" target="_blank">
-                                <button type="button" class="btn btn-sm rounded-pill custom-font-titillium-web"><i class="fas fa-plus" style="color: #1C4370;"></i> Read more</button>
+                                <button type="button" class="btn btn-sm rounded-pill custom-font-titillium-web myplusclass"><i class="fas fa-plus"></i> Read more..</button>
                             </a>
 
                             {{-- <a href="{{ route('type.details', ['id' => $item->id, 'type' => 'notice']) }}"
@@ -36,6 +36,6 @@
         </div>
     </div>
     <div class="more-btn col-md-12 text-center" style="padding-top: 0px;">
-        <a href="{{ route('type.all', ['type' => 'notice']) }}" class="btn btn-theme effect btn-md custom-font-titillium-web custom-font-titillium-web">View All Notices</a>
+        <a href="{{ route('type.all', ['type' => 'notice']) }}" class="btn btn-theme effect btn-md custom-font-titillium-web custom-font-titillium-web">View All Notices..</a>
     </div>
 </div>

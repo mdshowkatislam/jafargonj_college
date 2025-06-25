@@ -1,12 +1,14 @@
 @php
-   $design      = DB::table('cms_theme_designs')->where('page_id', '1')->where('page_tab_id', '1')->first();
-   $json_class  = json_decode(@$design->custom_class, true);
-   $json_style  = json_decode(@$design->custom_style, true);
+    $design = DB::table('cms_theme_designs')->where('page_id', '1')->where('page_tab_id', '1')->first();
+    $json_class = json_decode(@$design->custom_class, true);
+    $json_style = json_decode(@$design->custom_style, true);
 @endphp
 
 <!DOCTYPE html>
 <html lang="en">
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<meta http-equiv="content-type"
+      content="text/html;charset=UTF-8" />
+
 <head>
     <title>Jafargonj Mir Abdul Gafur College | @yield('title')</title>
     @include('frontend.partials.metas')
@@ -40,10 +42,12 @@
             visibility: visible;
             animation: slideDown 1s ease forwards;
         }
+
         #main-nav .nav-item .nav-link {
             color: #01000f;
             font-family: "Poppins", sans-serif;
         }
+
         #main-nav li {
             padding: 30px 0px;
 
@@ -71,6 +75,7 @@
         /* ============ desktop view .end// ============ */
         /* ============ mobile view ============ */
         @media(max-width: 991px) {
+
             .navbar.fixed-top .navbar-collapse,
             .navbar.sticky-top .navbar-collapse {
                 overflow-y: auto;
@@ -78,24 +83,31 @@
                 max-height: 90vh;
                 margin-top: 10px;
             }
+
             .navbar-toggler {
                 background: #01000f;
                 color: #ffffff;
             }
+
             #main_nav_butex {
                 z-index: 9 !important;
                 background: #ffffff;
             }
-            .has-megamenu, .megamenu, .custom-nav-title {
+
+            .has-megamenu,
+            .megamenu,
+            .custom-nav-title {
                 width: 100% !important;
                 margin-left: 0 !important;
             }
         }
+
         @media(max-width: 420px) {
             .university_description {
                 display: none !important;
             }
         }
+
         /* ============ mobile view .end// ============ */
         .top-search form button {
             background: transparent none repeat scroll 0 0;
@@ -161,26 +173,46 @@
             cursor: pointer;
         }
 
-        body{
+        body {
             font-family: "Titillium Web", sans-serif !important;
             padding: 0px;
         }
 
-        .custom-font-titillium-web{
+        .custom-font-titillium-web {
             font-family: "Titillium Web", "Tiro Bangla", sans-serif !important;
         }
+
         .mycolorpink {
             color: #da347c !important;
-        }   
+        }
+
         .mycolorgreen {
             color: #1bcc7a !important;
-        }   
+        }
 
+        .myplusclass i {
+            color: #1C4370;
+            transition: color 0.4s ease;
+        }
+
+        .myplusclass:hover {
+            background-color: #1C4370;
+            /* dark background on hover */
+            transform: scale(1.05);
+            /* slight zoom effect */
+        }
+
+        .myplusclass:hover i {
+            color: white;
+        }
     </style>
     @stack('styles')
 </head>
 
-<body data-aos-easing="ease" data-aos-duration="1200" data-aos-delay="0" style="overflow-x: hidden;">
+<body data-aos-easing="ease"
+      data-aos-duration="1200"
+      data-aos-delay="0"
+      style="overflow-x: hidden;">
     @include('frontend.layouts.scrool-top-menu')
 
     @yield('content')
@@ -274,8 +306,6 @@
         cu.start();
 
         CKEDITOR.config.allowedContent = true; // or configure allowed content in detail
-
-
     </script>
 </body>
 

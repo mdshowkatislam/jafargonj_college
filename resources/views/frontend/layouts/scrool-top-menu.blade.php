@@ -196,10 +196,10 @@
                  alt="Logo"
                  style="height: 70px; width: 225px; display: none;">
         </a>
-        <span style="color:#DD90B3"><span style="font-family:Papyrus;font-size:16px;">JMAGC</span><br>
-            <span style="font-size: 15px;color:#1bcc7a">জাফরগঞ্জ মীর আব্দুল
+        <span style="color:#DD90B3">
+            <span style="font-size: 18px;color:#1bcc7a;">জাফরগঞ্জ মীর আব্দুল
                 গফুর কলেজ</span><br>
-            <span>Jafargonj Mir Abdul Gafur College</span></span>
+            <span style="font-size: 15px;"">Jafargonj Mir Abdul Gafur College</span></span>
 
         <div class="collapse navbar-collapse"
              id="main_nav_butex">

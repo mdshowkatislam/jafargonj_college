@@ -36,7 +36,7 @@
                                 <div class="d-flex justify-content-between align-items-center footer-meta text-center mt-4 pt-4 border-top">
                                     <div class="btn-group">
                                         <a href="{{ route('type.details', ['id' => $item->id, 'type' => 'events']) }}">
-                                            <button type="button" class="btn btn-sm rounded-pill custom-font-titillium-web"><i class="fas fa-plus" style="color: #1C4370;"></i> Read more</button>
+                                            <button type="button" class="btn btn-sm rounded-pill custom-font-titillium-web myplusclass"><i class="fas fa-plus" style="color: #1C4370;"></i> Read more</button>
                                         </a>
                                     </div>
                                 </div>

@@ -55,6 +55,23 @@
 .single-news:hover::after {
     width: 100%;
 }
+     .myplusclass i {
+            color: #1C4370 !important;
+            transition: color 0.4s ease  !important;
+        }
+
+        .myplusclass:hover {
+            background-color: #1BCC7A !important;
+            /* dark background on hover */
+            transform: scale(1.05);
+            /* slight zoom effect */
+        }
+
+        .myplusclass:hover i {
+            color: white  !important;
+        }
+
+     
 </style>
 <div class="event-area flex-less mb-5">
     <div class="container mb-5">
@@ -117,23 +134,23 @@
                                                     <div class="btn-group">
                                                         @if($page_id == '1')
                                                             <a href="{{ route('type.details', ['id' => $item->id, 'type' => 'events']) }}">
-                                                                <button type="button" class="btn btn-sm rounded-pill"><i class="fas fa-plus" style="color: #1C4370;"></i> Read more</button>
+                                                                <button type="button" class="btn btn-sm rounded-pill myplusclass"><i class="fas fa-plus" ></i> Read more</button>
                                                             </a>
                                                         @elseif($page_id == '2')
                                                             <a href="{{ route('type.details', ["id"=>$item->id,"type"=>'notice','url'=>$url]) }}">
-                                                                <button type="button" class="btn btn-sm rounded-pill"><i class="fas fa-plus" style="color: #1C4370;"></i> Read more</button>
+                                                                <button type="button" class="btn btn-sm rounded-pill myplusclass"><i class="fas fa-plus" ></i> Read more</button>
                                                             </a>
                                                         @elseif($page_id == '3')
                                                             <a href="{{ route('type.details', ["id"=>$item->id,"type"=>'notice','url'=>$url]) }}">
-                                                                <button type="button" class="btn btn-sm rounded-pill"><i class="fas fa-plus" style="color: #1C4370;"></i> Read more</button>
+                                                                <button type="button" class="btn btn-sm rounded-pill myplusclass"><i class="fas fa-plus" ></i> Read more</button>
                                                             </a>
                                                         @elseif($page_id == '4')
                                                             <a href="{{ route('type.details', ["id"=>$item->id,"type"=>'notice','url'=>$url]) }}">
-                                                                <button type="button" class="btn btn-sm rounded-pill"><i class="fas fa-plus" style="color: #1C4370;"></i> Read more</button>
+                                                                <button type="button" class="btn btn-sm rounded-pill myplusclass"><i class="fas fa-plus" ></i> Read more</button>
                                                             </a>
                                                         @elseif($page_id == '5')
                                                             <a href="{{ route('type.details', ["id"=>$item->id,"type"=>'notice']) }}">
-                                                                <button type="button" class="btn btn-sm rounded-pill"><i class="fas fa-plus" style="color: #1C4370;"></i> Read more</button>
+                                                                <button type="button" class="btn btn-sm rounded-pill myplusclass"><i class="fas fa-plus" ></i> Read more</button>
                                                             </a>
                                                         @endif
                                                     </div>
@@ -191,15 +208,15 @@
                                         <div class="mb-3 mt-3">
                                             <h5 style="text-align: justify; font-size:15px; font-weight: 400;">
                                                 @if($page_id == '1')
-                                                    <a href="{{ route('type.details', ['id' => $item->id, 'type' => 'notice']) }}" class="custom-font-titillium-web" target="_blank">{{ $item->title }}</a>
+                                                    <a href="{{ route('type.details', ['id' => $item->id, 'type' => 'notice']) }}" class="custom-font-titillium-web myplusclass" target="_blank"> {{ $item->title }}</a>
                                                 @elseif($page_id == '2')
-                                                    <a href="{{ route('type.details', ["id"=>$item->id,"type"=>'notice','url'=>$url]) }}" class="custom-font-titillium-web" target="_blank">{{ $item->title }}</a>
+                                                    <a href="{{ route('type.details', ["id"=>$item->id,"type"=>'notice','url'=>$url]) }}" class="custom-font-titillium-web myplusclass" target="_blank">{{ $item->title }}</a>
                                                 @elseif($page_id == '3')
-                                                    <a href="{{ route('type.details', ["id"=>$item->id,"type"=>'notice','url'=>$url]) }}" class="custom-font-titillium-web" target="_blank">{{ $item->title }}</a>
+                                                    <a href="{{ route('type.details', ["id"=>$item->id,"type"=>'notice','url'=>$url]) }}" class="custom-font-titillium-web myplusclass" target="_blank">{{ $item->title }}</a>
                                                 @elseif($page_id == '4')
-                                                    <a href="{{ route('type.details', ["id"=>$item->id,"type"=>'notice','url'=>$url]) }}" class="custom-font-titillium-web" target="_blank">{{ $item->title }}</a>
+                                                    <a href="{{ route('type.details', ["id"=>$item->id,"type"=>'notice','url'=>$url]) }}" class="custom-font-titillium-web myplusclass" target="_blank">{{ $item->title }}</a>
                                                 @elseif($page_id == '5')
-                                                    <a href="{{ route('type.details', ["id"=>$item->id,"type"=>'notice','url'=>$url]) }}" class="custom-font-titillium-web" target="_blank">{{ $item->title }}</a>
+                                                    <a href="{{ route('type.details', ["id"=>$item->id,"type"=>'notice','url'=>$url]) }}" class="custom-font-titillium-web myplusclass" target="_blank">{{ $item->title }}</a>
                                                 @endif
                                             </h5>
                                             
@@ -225,28 +242,28 @@
                                             <li>
                                                 @if($page_id == '1')
                                                     <a href="{{ route('type.details', ['id' => $item->id, 'type' => 'notice']) }}">
-                                                        <button type="button" class="btn btn-sm rounded-pill custom-font-titillium-web"><i class="fas fa-plus" style="color: #1C4370;"></i> Read more</button>
+                                                        <button type="button" class="btn btn-sm rounded-pill myplusclass"><i class="fas fa-plus" ></i> Read more</button>
                                                     </a>
                                                 @elseif($page_id == '2')
                                                     <a href="{{ route('type.details', ["id"=>$item->id,"type"=>'notice','url'=>$url]) }}">
-                                                        <button type="button" class="btn btn-sm rounded-pill custom-font-titillium-web"><i class="fas fa-plus" style="color: #1C4370;"></i> Read more</button>
+                                                        <button type="button" class="btn btn-sm rounded-pill custom-font-titillium-web myplusclass"><i class="fas fa-plus" ></i> Read more</button>
                                                     </a>
                                                 @elseif($page_id == '3')
                                                     <a href="{{ route('type.details', ["id"=>$item->id,"type"=>'notice','url'=>$url]) }}">
-                                                        <button type="button" class="btn btn-sm rounded-pill custom-font-titillium-web"><i class="fas fa-plus" style="color: #1C4370;"></i> Read more</button>
+                                                        <button type="button" class="btn btn-sm rounded-pill custom-font-titillium-web myplusclass"><i class="fas fa-plus" ></i> Read more</button>
                                                     </a>
                                                 @elseif($page_id == '4')
                                                     <a href="{{ route('type.details', ["id"=>$item->id,"type"=>'notice','url'=>$url]) }}">
-                                                        <button type="button" class="btn btn-sm rounded-pill custom-font-titillium-web"><i class="fas fa-plus" style="color: #1C4370;"></i> Read more</button>
+                                                        <button type="button" class="btn btn-sm rounded-pill custom-font-titillium-web myplusclass"><i class="fas fa-plus" ></i> Read more</button>
                                                     </a>
                                                 @elseif($page_id == '5')
                                                     <a href="{{ route('type.details', ["id"=>$item->id,"type"=>'notice','url'=>$url]) }}">
-                                                        <button type="button" class="btn btn-sm rounded-pill custom-font-titillium-web"><i class="fas fa-plus" style="color: #1C4370;"></i> Read more</button>
+                                                        <button type="button" class="btn btn-sm rounded-pill custom-font-titillium-web myplusclass"><i class="fas fa-plus" ></i> Read more</button>
                                                     </a>
                                                 @endif
                                                 {{-- <a href="{{ route('type.details', ['id' => $item->id, 'type' => 'notice']) }}" target="_blank"
                                                 class="btn circle btn-dark border btn-sm text-center readmore-common-button custom-font-titillium-web">
-                                                <i class="fas fa-plus" style="color: #002147"></i> Read More</a> --}}
+                                                <i class="fas fa-plus" style="color: #002147"></i> Read more</a> --}}
                                                 
                                             </li>
                                         </div>
