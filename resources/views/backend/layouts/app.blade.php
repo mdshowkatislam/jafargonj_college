@@ -134,7 +134,7 @@
         <!-- Main Footer -->
         <footer class="main-footer" style="font-size: 14px;">
             <strong>@lang('Copyright') &copy; {{ date('Y') }} <span
-                    style="color:#17a2b8">@lang('BUTEX')</span></strong>
+                    style="color:#17a2b8">@lang('Jafargonj Mir Abdul Gafur Degree College')</span></strong>
            
             <div class="float-right d-none d-sm-inline-block">
                 <b>@lang('Developed by:') </b> <a target="_blank" href="http://www.nanoit.biz"> <span

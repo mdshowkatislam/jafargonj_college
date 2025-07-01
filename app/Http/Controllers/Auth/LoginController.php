@@ -9,6 +9,7 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Http;
+use function PHPUnit\Framework\once;
 
 class LoginController extends Controller
 {
@@ -19,13 +20,14 @@ class LoginController extends Controller
 
     public function postLogin(Request $request)
     {
-        // dd(bcrypt($request->password));
+       
         // Validate the login credentials
 
         $request->validate([
             'email' => 'required|email',
             'password' => 'required',
         ]);
+       
         
             if (Auth::attempt($request->only(['email', 'password']), $request->get('remember'))) {
                 if (Auth::user()->status == 0){

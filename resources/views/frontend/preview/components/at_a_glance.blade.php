@@ -2,7 +2,8 @@
 <script>
     $(document).ready(function() {
         var imagePath = "{{ asset('upload/banner/' . $banner->image) }}"; // Construct the full image path
-        $('.fun-factor-area').css('background-image', 'url("' + imagePath + '")');
+       
+        $('.fun-factor-area').css({'background-image': 'url("' + imagePath + '")','background-repeat':'no-repeat','background-position': 'center center','background-size': 'cover','background-size': 'cover'});
     });
 </script>
 
@@ -20,7 +21,7 @@
             <div class="col-md-3 col-sm-6 item">
                 <div class="fun-fact">
                     <div class="icon">
-                        <i class="fas fa-university"></i>
+                        <i class="fas fa-university" style="color:#1BCC7A !important;border-color:#1BCC7A;"></i>
                     </div>
                     <div class="info">
                         <span id="founded" class="countup" cup-end="1986" cup-duration="2000"></span>
@@ -35,7 +36,7 @@
             <div class="col-md-3 col-sm-6 item">
                 <div class="fun-fact">
                     <div class="icon">
-                        <i class="fas fa-user-shield"></i>
+                        <i class="fas fa-user-shield" style="color:#1BCC7A !important;border-color:#1BCC7A;"></i>
                     </div>
                     <div class="info" style="text-align: center">
                         <div class="d-flex justify-content-center gap-2">
@@ -44,7 +45,7 @@
                             <span style="display:inline;font-size: 20px">+</span>
                         </div>
                         <div class="clearfix"></div>
-                        <span class="medium custom-font-titillium-web ">Department Members</span>
+                        <span class="medium custom-font-titillium-web ">Teacher and stuffs</span>
                     </div>
                 </div>
             </div>
@@ -52,7 +53,7 @@
             <div class="col-md-3 col-sm-6 item">
                 <div class="fun-fact">
                     <div class="icon">
-                        <i class="fas fa-users"></i>
+                        <i class="fas fa-users" style="color:#1BCC7A !important;border-color:#1BCC7A;"></i>
                     </div>
                     <div class="info" style="text-align: center">
                         <div class="d-flex justify-content-center gap-2">
@@ -69,12 +70,12 @@
             <div class="col-md-3 col-sm-6 item">
                 <div class="fun-fact">
                     <div class="icon">
-                        <i class="fas fa-school"></i>
+                        <i class="fas fa-school" style="color:#1BCC7A !important;border-color:#1BCC7A;"></i>
                     </div>
                     <div class="info" style="text-align: center">
                         {{-- <span id="Affiliated_Colleges" class="countup" cup-end="{{ @$at_a_glance->phd_number }}" cup-duration="1000"></span> --}}
                         <span id="Affiliated_Colleges" class="countup" cup-end="{{ @$affiliationNumber }}" cup-duration="1000"></span>
-                        <span class="medium custom-font-titillium-web ">Courses Offered</span>
+                        <span class="medium custom-font-titillium-web ">All Subjects</span>
                     </div>
                 </div>
             </div>

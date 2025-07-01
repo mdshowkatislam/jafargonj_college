@@ -16,8 +16,8 @@ $logoFooterCenter = DB::table('logos')->where('type_id',3)->first();
     }
 
     .footer-default-padding {
-        padding-top: 50px;
-        padding-bottom: 60px;
+        padding-top: 20px;
+        padding-bottom: 15px;
     }
 
     .top-course-items .footer-meta {
@@ -464,7 +464,7 @@ $logoFooterCenter = DB::table('logos')->where('type_id',3)->first();
         <div class="container" style="{{ @$json_style['bottom_text_color'] }}">
             <div class="row">
                 <div class="col-sm-6">
-                    <p class="mb-0 fs-7 custom-font-titillium-web">All Rights Reserved © Jafargonj Mir Abdul Gafur College, 2025</p>
+                    <p class="mb-0 fs-7 custom-font-titillium-web">All Rights Reserved © Jafargonj Mir Abdul Gafur College- 2025</p>
                 </div>
                 <div class="col-sm-6 footer-text">
                     <p class="mb-0 fs-7 custom-font-titillium-web">

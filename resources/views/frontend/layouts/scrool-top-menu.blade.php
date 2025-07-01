@@ -175,31 +175,27 @@
 </div> --}}
 
 <!-- ============= Desktop Desive ============== -->
-<nav style="height: 90px; z-index:99;"
+<nav style="height: 90px; z-index:99;box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);"
      id="navbar_top"
      class="desktop-menu navbar navbar-expand-lg navbar-dark bg-light">
-    <div class="container"
-         style="justify-content: none !important;">
+    <div class="container">
 
         @php
             $logoNav = DB::table('logos')->where('type_id', 1)->first();
             $logoNavFixed = DB::table('logos')->where('type_id', 2)->first();
         @endphp
 
-        <a class="navbar-brand"
+        <a class="navbar-brand" style="margin-right: 3px !important; height: 40px;"
            href="{{ url('/') }}">
             <img src="{{ asset('upload/logo/' . @$logoNav->image) }}"
                  class="logo logo-display logo-responsive"
                  alt="{{ $logoNav->name }}">
-            <img src="{{ asset('upload/logo/' . @$logoNavFixed->image) }}"
-                 class="logo logo-scrolled"
-                 alt="Logo"
-                 style="height: 70px; width: 225px; display: none;">
+          
         </a>
         <span style="color:#DD90B3">
-            <span style="font-size: 18px;color:#1bcc7a;">জাফরগঞ্জ মীর আব্দুল
+            <span style="font-size: 20px;color:#1bcc7a;">জাফরগঞ্জ মীর আব্দুল
                 গফুর কলেজ</span><br>
-            <span style="font-size: 15px;"">Jafargonj Mir Abdul Gafur College</span></span>
+            <span style="font-size: 17px;"">Jafargonj Mir Abdul Gafur College</span></span>
 
         <div class="collapse navbar-collapse"
              id="main_nav_butex">
