@@ -49,6 +49,11 @@
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 
     <style type="text/css">
+     .brand-image {
+        width: 60px !important;
+        height: 60px !important;
+        object-fit: contain;
+    }
         .nav-tabs .nav-item {
             margin-bottom: 0px;
         }
@@ -116,7 +121,7 @@
 <body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
     <div class="wrapper">
         <!-- Navbar -->
-        <nav class="main-header navbar navbar-expand navbar-white navbar-light" style="background-color: #b01220;">
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light" style="background-color: #1BCC7A;">
             <!-- Left navbar links -->
             @include('backend.layouts.navbar')
         </nav>

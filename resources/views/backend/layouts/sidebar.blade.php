@@ -117,17 +117,25 @@
     @endphp
 @endif
 <style>
-    .sidebar-light-primary .nav-sidebar > .nav-item > .nav-link.active
+    /* .sidebar-light-primary .nav-sidebar > .nav-item > .nav-link.active
     {
-        background-color: #6f0b14 !important; 
-    }
+        background-color: #F4F4F5 !important; 
+    } */
 </style>
-<aside class="main-sidebar sidebar-light-primary elevation-4" style="background: #b01220;">
-    <a href="{{ route('index') }}" target="_blank" class="brand-link">
-        <img src="{{ asset('images/default_logo.png') }}" alt="Admin Dashboard"
-            class="brand-image" style="opacity: .8">
-        <span class="brand-text font-weight-light" style="font-size: 15px;font-weight: bold;"></span>
-    </a>
+<aside class="main-sidebar sidebar-light-primary elevation-4" style="background: #149c5c;">
+ <a href="{{ route('index') }}" target="_blank" class="brand-link" style="display: flex; align-items: center; padding: 3px;">
+    <img src="{{ asset('images/default_logo.png') }}" alt="Admin Dashboard"
+         class="brand-image"
+         style="width: 48px; height: 48px; opacity: 0.95; margin-right: 10px;">
+         
+    <span style="color: #DD90B3; line-height: 1;">
+        <div class="bg-warning" style="font-size: 11px; color: #1bcc7a;">জাফরগঞ্জ মীর আব্দুল গফুর কলেজ</div>
+        <div class="bg-info" style="font-size: 10px;">Jafargonj Mir Abdul Gafur College</div>
+    </span>
+</a>
+
+
+
     <div class="sidebar">
         <div class="user-panel mt-3 pb-3 mb-3 d-flex">
             <div class="image">

@@ -321,9 +321,10 @@ $logoFooterCenter = DB::table('logos')->where('type_id',3)->first();
         left: 0;
         width: 100%;
         height: 100%;
-        background: #035045eb;
+        background: #006636;
         z-index: -1; 
         pointer-events: none; 
+        opacity:.6;
     }
 
     .footer-margin{
@@ -460,17 +461,18 @@ $logoFooterCenter = DB::table('logos')->where('type_id',3)->first();
     </div>
 
     <!-- Start Footer Bottom -->
-    <div class="py-2 align-items-center" style="{{ @$design->css_preview_bottom }}">
+    {{-- <div class="py-2 align-items-center" style="{{ @$design->css_preview_bottom }}"> --}}
+    <div class="py-2 align-items-center" style="color: #000000; font-size: 14px; font-family: Titillium Web; background-color:  #550f2d;">
         <div class="container" style="{{ @$json_style['bottom_text_color'] }}">
-            <div class="row">
+            <div class="row" >
                 <div class="col-sm-6">
-                    <p class="mb-0 fs-7 custom-font-titillium-web">All Rights Reserved © Jafargonj Mir Abdul Gafur College- 2025</p>
+                    <p class="mb-0 fs-7 custom-font-titillium-web" >All Rights Reserved © Jafargonj Mir Abdul Gafur College- 2025</p>
                 </div>
                 <div class="col-sm-6 footer-text">
-                    <p class="mb-0 fs-7 custom-font-titillium-web">
+                    <p class="mb-0 fs-7 custom-font-titillium-web" >
                         Developed by
                         <a rel="nofollow" href="http://www.nanoit.biz/" target="_blank" class="text-white fw-bold">
-                            <span>Nanosoft</span>
+                            <span >Nanosoft</span>
                         </a>
                     </p>
                 </div>
