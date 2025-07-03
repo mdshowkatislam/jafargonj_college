@@ -128,9 +128,9 @@
          class="brand-image"
          style="width: 48px; height: 48px; opacity: 0.95; margin-right: 10px;">
          
-    <span style="color: #DD90B3; line-height: 1;">
-        <div class="bg-warning" style="font-size: 11px; color: #1bcc7a;">জাফরগঞ্জ মীর আব্দুল গফুর কলেজ</div>
-        <div class="bg-info" style="font-size: 10px;">Jafargonj Mir Abdul Gafur College</div>
+    <span style="color: #DD90B3; line-height: 1.4;">
+        <div style="font-size: 12px; color: #1bcc7a;">জাফরগঞ্জ মীর আব্দুল গফুর কলেজ</div>
+        <div  style="font-size: 12px;">Jafargonj Mir Abdul Gafur College</div>
     </span>
 </a>
 

@@ -25,7 +25,6 @@ class PagesController extends Controller
         // $data['page_info']=CustomPage::find($id);/
         $data['page_info'] = $this->pageService->getByID($id);
         $data['banner'] = $this->bannerService->bannerByRefId(1);
-
         return view('frontend.pages', $data);
     }
     

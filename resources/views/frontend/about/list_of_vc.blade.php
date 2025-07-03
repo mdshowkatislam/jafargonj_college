@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master-landing')
 @php
-$page_title = 'VC Honors Board';
+$page_title = 'List Of Teachers';
 @endphp
 @section('title')
 {{ $page_title }}
@@ -16,7 +16,7 @@ $page_title = 'VC Honors Board';
 	<div class="container">
 		<div class="mt-4">
 			<div class="text-center" style="background-color: #00c5bf;">
-				<h3 class="title-text  my-font text-white p-3" style="font-size: 25px">List of Vice Chancellors Since 2010</h3>
+				<h3 class="title-text  my-font text-white p-3" style="font-size: 25px">List of Teachers Since 2025</h3>
 			</div>
 		</div>
 	</div>

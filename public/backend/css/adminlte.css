@@ -11162,10 +11162,10 @@ body,
 .brand-image {
   float: left;
   line-height: .8;
-  margin-left: .8rem;
+  margin-left: .2rem;
   margin-right: .5rem;
   margin-top: -3px;
-  max-height: 34px;
+  max-height: 52px;
   width: auto;
 }
 

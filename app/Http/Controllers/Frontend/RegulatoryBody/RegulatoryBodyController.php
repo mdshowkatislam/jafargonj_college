@@ -22,8 +22,10 @@ class RegulatoryBodyController extends Controller
 
     public function regulatory_body($committe_type)
     {
+        // dd($committe_type);
         $data['committee'] = CommitteType::findOrFail($committe_type);
-        $data['members'] = $this->RegulatoryBodyService->getCommitteeTypeMember($committe_type);
+        // $data['members'] = $this->RegulatoryBodyService->getCommitteeTypeMember($committe_type);
+        $data['members'] =[];
         $data['banner'] = $this->bannerService->bannerByRefId(1);
         // dd($data['members']);
         return view('frontend.regulatories_body.member_list', $data);

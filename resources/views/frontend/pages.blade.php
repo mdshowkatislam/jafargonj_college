@@ -1,6 +1,7 @@
 @extends('frontend.landing')
 @php
-    $page_title = $page_info->title;
+    // $page_title = $page_info->title;
+    $page_title = 'জাফরগঞ্জ মীর আব্দুল গফুর কলেজ';
 @endphp
 @section('title')
     {{ $page_title }}

@@ -714,6 +714,7 @@ class FrontController extends Controller
         $data['vcInfo'] = $this->message->getMessageFromHead(3, 1);
         $data['vcProfile'] = $this->officeService->getByID(1);
         $data['vcHBM'] = $this->honorBoardMemberService->getHonorBoardMembersByType(1); //type 1= VC
+        // dd($data['vcInfo'] );
         $data['banner'] = $this->bannerService->bannerByRefId(1);
         return view('frontend.about.vc_information', $data);
     }

@@ -1,6 +1,7 @@
 @extends('frontend.layouts.master-landing')
 @php
-    $page_title = $page_info->title;
+    // $page_title = $page_info->title;
+    $page_title = 'জাফরগঞ্জ মীর আব্দুল গফুর কলেজ';
    $file_array= json_decode($page_info['image']);
 @endphp
 @section('title')
