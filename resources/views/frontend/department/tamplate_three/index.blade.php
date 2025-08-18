@@ -322,7 +322,7 @@
                             <div class="single-news-date">
                                 <ul class="m-0">
                                     <li class="py-1" style="font-size: 14px"><i class="fas fa-calendar-alt pe-1"></i>
-                                        {{ date('M d, Y'), strtotime($item->date) }}</li>
+                                        {{ date('M d, Y', strtotime($item->date)) }}</li>
                                 </ul>
                             </div>
                             <div class="single-news-content px-4 pt-3 pb-5">

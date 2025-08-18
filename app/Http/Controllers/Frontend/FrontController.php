@@ -1085,7 +1085,7 @@ class FrontController extends Controller
     public function allAcademics()
     {
         $data['faculties'] = Faculty::where('status', 1)->orderBy('sort_order')->get();
-        $data['banner'] = $this->bannerService->bannerByRefId(1);
+        $data['banner'] = $this->bannerService->bannerByRefId(5);
       
         return view('frontend.partials.sections.academics_all', $data);
     }

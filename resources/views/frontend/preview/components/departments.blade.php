@@ -2,7 +2,7 @@
     
     <div class="d-flex justify-content-between align-items-end">
         <h2 class="text-uppercase mb-0 home-content-heading custom-font-titillium-web">
-            Departments
+            SUBJECTS
         </h2>
         <a class="my-auto home-content-heading custom-font-titillium-web" href="{{ route('faculty_department', $faculty->id) }}">All</a>
     </div>

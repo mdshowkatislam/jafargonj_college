@@ -1,6 +1,6 @@
 @extends('frontend.layouts.master-landing')
 @php
-$page_title = 'List Of Teachers';
+$page_title = 'List Of Honour Board 2025';
 @endphp
 @section('title')
 {{ $page_title }}
@@ -16,7 +16,7 @@ $page_title = 'List Of Teachers';
 	<div class="container">
 		<div class="mt-4">
 			<div class="text-center" style="background-color: #00c5bf;">
-				<h3 class="title-text  my-font text-white p-3" style="font-size: 25px">List of Teachers Since 2025</h3>
+				<h3 class="title-text  my-font text-white p-3" style="font-size: 25px">List of Honour Board 2025</h3>
 			</div>
 		</div>
 	</div>

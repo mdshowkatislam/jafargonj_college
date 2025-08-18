@@ -149,7 +149,7 @@
             <div class="form-row">
              
               <div class="form-group col-md-6">
-                <label for="bup_no">@lang('Butex No') </label>
+                <label for="bup_no">@lang('ID NO') </label>
                 <input id="bup_no" type="text" name="butex_no" class="form-control  @error('butex_no') is-invalid @enderror" value="{{@$editData->butex_no}}" placeholder="">
                   @error('butex_no')
                   <span class="invalid-feedback" role="alert">

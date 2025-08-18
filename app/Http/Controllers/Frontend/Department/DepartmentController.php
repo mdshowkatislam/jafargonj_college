@@ -146,6 +146,7 @@ class DepartmentController extends Controller
         // $data['modal']                  = $this->landingModalService->getModalByType(3);
         $data['modal']                = $this->landingModalService->getModalByTypeId(3, $id);
         $data['message']                = $this->messaService->getMessageFromHead(2, $id);
+        // dd( $data['message']   );
         $data['infos']                  = $this->researchService->ResearchByDepartment($data['department']->id);
         //$data['infos']                  = $this->researchService->ResearchByDepartment($data['department']->id);
   
