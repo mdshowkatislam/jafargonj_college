@@ -30,6 +30,7 @@ class PersonnelsToFacultyService
 	}
     public function departmentMembers($department_id)
 	{
+        // dd($department_id);
         $where = [];
         if(@$department_id){
             $where[] = ['department_id','=', $department_id];

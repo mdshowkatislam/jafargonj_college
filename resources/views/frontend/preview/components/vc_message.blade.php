@@ -29,7 +29,10 @@
 <div class="equal-height aos-init features" style="width: 100%">
     <div class="item p-5 vc-message" style="">
         @php
+        
         $truncatedDescription = str_limit(@$vcInfo->long_description, 600);
+        // dd(@$truncatedDescription);
+        // dd($vcInfo);
         @endphp
         
             <div style="overflow: hidden;" class="info">

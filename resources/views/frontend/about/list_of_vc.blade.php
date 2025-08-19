@@ -25,49 +25,73 @@ $page_title = 'List Of Honour Board 2025';
 <section>
     <div class="about-wrap pt-3">
         <div class="container">
+            
+            {{-- First show President --}}
+            @php
+                $president = $vc_list->firstWhere('designation', 'President');
+                $others = $vc_list->where('designation', '!=', 'President');
+            @endphp
+
+            @if($president)
+            <div class="row justify-content-center mb-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card rounded-0 border-0 d-block text-center pt-3 dean_staff" 
+                         style="box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;">
+                        <div class="border-one"></div>
+                        <div class="border-two"></div>
+                        <img class="mx-2 mt-2 shadow-lg image-circle"
+                             src="{{ asset('upload/vc_honor_board/' . $president->image) }}"
+                             height="200" width="200"
+                             onerror="this.onerror=null;this.src='{{ asset('upload/user-dummy.jpeg') }}';"
+                             alt="" />
+                        <div class="card-body" style="min-height: 7.75rem;">
+                            <h5 class="custom-font-titillium-web card-title fs-5 text-center text-capitalize border-top pt-3">
+                                {{ $president->name }}
+                            </h5>
+                            <p class="text-center common-font-color fs-6 custom-font-titillium-web">
+                               {{ $president->designation }}
+                            </p>                                
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @endif
+
+            {{-- Then show others --}}
             <div class="row">
-                @forelse ($vc_list as $person)
+                @forelse ($others as $person)
                     <div class="col-12 col-md-6 col-lg-3 my-3">
-                        <div class="card rounded-0 border-0 d-block text-center pt-3 dean_staff" style="box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;">
+                        <div class="card rounded-0 border-0 d-block text-center pt-3 dean_staff" 
+                             style="box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;">
                             <div class="border-one"></div>
                             <div class="border-two"></div>
-                            <img class="mx-2 mt-2 shadow-lg image-circle" src="{{ asset('upload/vc_honor_board/' . $person->image) }}" height="200" width="200" onerror="this.onerror=null;this.src='{{ asset('upload/user-dummy.jpeg') }}';" alt="" />
+                            <img class="mx-2 mt-2 shadow-lg image-circle"
+                                 src="{{ asset('upload/vc_honor_board/' . $person->image) }}"
+                                 height="200" width="200"
+                                 onerror="this.onerror=null;this.src='{{ asset('upload/user-dummy.jpeg') }}';"
+                                 alt="" />
                             <div class="card-body" style="min-height: 7.75rem;">
                                 <h5 class="custom-font-titillium-web card-title fs-5 text-center text-capitalize border-top pt-3">
                                     {{ $person->name }}
                                 </h5>
                                 <p class="text-center common-font-color fs-6 custom-font-titillium-web">
-                                    {{ Carbon\Carbon::parse($person->start_date)->format('d-m-Y') }} - 
-                                    {{ isset($person->end_date) ? Carbon\Carbon::parse($person->end_date)->format('d-m-Y') : 'present' }}
+                                   {{ $person->designation }}
                                 </p>                                
                             </div>
                         </div>
                     </div>
-                    {{-- <div class="col-12 col-md-6 col-lg-3 mt-3 mb-5">
-                        <div class="card rounded-0 member-list-card zoom_in_hover" style="background-color: #00c5bf;">
-                            <img class="mb-0"
-                                src="{{ asset('upload/profiles/' . $person->image) }}"
-                                onerror="this.onerror=null;this.src='{{ asset('upload/user-dummy.jpeg') }}';"
-                                alt="Image" />
-                            <div class="card-body" style="min-height: 100px;">
-                                <h5 class="card-title text-white fs-6 mt-0 text-center">
-                                    {{ $person->name }}
-                                </h5>
-                                <p class="card-text text-white text-center">
-                                    {{ $person->start_date }} - {{ $person->end_date }}
-                                </p>
-                            </div>
-                        </div>
-                    </div> --}}
                 @empty
-                <div class="col-md-12">
-                    <h2 class="fs-5 p-3 mt-3 mb-5 bg-light rounded">No information found at the moment..</h2>
-                </div>
+                    <div class="col-md-12">
+                        <h2 class="fs-5 p-3 mt-3 mb-5 bg-light rounded">
+                            No information found at the moment..
+                        </h2>
+                    </div>
                 @endforelse
             </div>
         </div>
     </div>
 </section>
+
 
 
 @endsection

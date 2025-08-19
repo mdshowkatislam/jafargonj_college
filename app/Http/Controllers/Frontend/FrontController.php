@@ -460,7 +460,7 @@ class FrontController extends Controller
 
     public function vc_honor_board()
     {
-        $data['vc_list'] = VcHonorBoardMember::where('status', 1)->orderBy('start_date', 'DESC')->get();
+        $data['vc_list'] = VcHonorBoardMember::where('status', 1)->get();
         $data['banner'] = $this->bannerService->bannerByRefId(1);
         // dd($data['banner']);
         return view('frontend.about.list_of_vc', $data);

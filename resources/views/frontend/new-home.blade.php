@@ -122,7 +122,9 @@
 
 <section class="custom-font-titillium-web {{ @$section_layout }}" data-aos="{{ @$section_fade }}" style="{{ @$cssPreview }} {{ @$section->custom_css}}">
     <div class="row">
+    
         @if (!empty(@$section->col1_name))
+          
             <div class="{{ @$col_1 }}">
                 @php
                     $component = App\Models\CmsComponent::where('section_id', @$section->rand_id)->where('column_id', '1')->latest()->first();
@@ -134,9 +136,11 @@
                 @endphp
 
                 <div class="{{ @$json_class1['layout'] }}" data-aos="{{ @$json_class1['fade'] }}" style="{{ @$component->cssPreview }} {{ @$component->custom_css}}">
+                    
                     @if ($component_type == '0')
                         <div>
                             <span class="custom-font-titillium-web">{!! @$component->long_descriptions !!}</span>
+                              
 
                             @if(@$component->long_details_descriptions)
                                 <a href="/single-page/{{ $component->id }}">[<u>Read more</u>]</a>
@@ -160,6 +164,7 @@
                                 </div>
                             @endif
                         </div>
+                       
                     @elseif($component_type == '1')
                     @php
                        $formTemplate = App\Models\FormTemplate::where('id', @$component_id)->where('status', 'active')->first();
@@ -167,10 +172,12 @@
                         $formTemplate->form_data = json_decode(@$formTemplate->form_data, true);
                        }
                     @endphp
+                   
                     @if(!empty($formTemplate->form_data))
                         @include('frontend.preview.components.form_template')
                     @endif
                     @elseif($component_type == '2')
+                    
                         @if ($component_id == 'c1')
                             @include('frontend.preview.components.slider')
                         @elseif($component_id == 'c2')

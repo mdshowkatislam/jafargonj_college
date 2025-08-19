@@ -26,15 +26,17 @@ class ManageDepartmentController extends Controller
     }
     public function index()
     {
+        
         $department_head = false;
         $data['faculty_head'] = $this->ProfileService->getFacultyHead(Auth::user()->profile_id);
         $data['department_head'] = $this->ProfileService->getDepartmentHead(Auth::user()->profile_id);
-        // dd($data['faculty_head']);
+        // dd($data['department_head']);
         if (isset($data['faculty_head']) && count($data['faculty_head']) > 0) {
             $faculties = Faculty::where('id', $data['faculty_head'][0]->id)->get();
         } elseif (isset($data['department_head']) && count($data['department_head']) > 0) {
             $faculties = Faculty::where('id', $data['department_head'][0]->faculty_id)->get();
             $department_head = true;
+            //   dd($faculties);
         } else {
             //$data = Department::with('faculty')->oldest()->get();
             $faculties = FacultyService::All();

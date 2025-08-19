@@ -130,8 +130,10 @@ class ProfileService implements IService
     }
     public function getDepartmentHead($id)
     {
+        // dd($id);
         try {
             $data = Department::where('profile_id', $id)->get();
+            // dd($data);
             return $data;
         } catch (\Exception $e) {
             $d['error'] = 'Something wrong';

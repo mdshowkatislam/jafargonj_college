@@ -147,6 +147,7 @@
         @if (!empty(@$section->col1_name))
             <div class="{{ @$col_1 }}">
                 @php
+                
                     $component = App\Models\CmsComponent::where('section_id', @$section->rand_id)->where('column_id', '1')->latest()->first();
                     $component_type   = @$component->component_type;
                     $component_id     = @$component->component_id;
@@ -158,6 +159,7 @@
                 <div class="{{ @$json_class1['layout'] }}" data-aos="{{ @$json_class1['fade'] }}" style="{{ @$component->cssPreview }} {{ @$component->custom_css}}">
                     @if ($component_type == '0')
                         <div>
+                            {{-- @dd($component->long_descriptions ) --}}
                             {!! @$component->long_descriptions !!}
                             @if (!empty($component->files) && file_exists(public_path('upload/themes/'.$component->files)))
                                 <style>
