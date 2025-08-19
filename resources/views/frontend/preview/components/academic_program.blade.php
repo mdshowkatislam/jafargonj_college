@@ -28,6 +28,7 @@
                         ->where('status', 1)
                         ->get();
                 @endphp
+                
                 @if (count($programs) > 0)
                 @foreach(@$programs as $prog)
                 {{-- @dd($prog) --}}

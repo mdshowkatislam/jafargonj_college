@@ -106,11 +106,12 @@ class FacultyController extends Controller
         $type_id     = 1;
         $page_id     = 2;
         $page_tab_id = $id;
-        
+        // dd($id);
         $data['faculty']                = $this->FacultyService->getByID($id);
         $data['program_cat']            = $this->FacultyService->programCategory();
         $data['faculty_programs']       = $this->programService->facultyWiseProgram($id);
         $data['departments']            = $this->DepartmentService->DepartmentList(['faculty_id' => $id]);
+        // dd($data['departments']  );
         $data['faculty_head']           = $this->FacultyService->facultyHead(['faculty_id' => $id]);
         // $data['faculty_tamplate']    = $this->FacultyService->facultyTamplate(['faculty_id' => $id]);
         $data['faculty_name']           = $this->FacultyService->facultyName(['faculty_id' => $id]);

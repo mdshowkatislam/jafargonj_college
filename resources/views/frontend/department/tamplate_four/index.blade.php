@@ -186,6 +186,7 @@
                             @include('frontend.preview.components.form_template')
                         @endif
                     @elseif($component_type == '2')
+                    
                         @if ($component_id == 'c1')
                             @include('frontend.preview.components.slider')
                         @elseif($component_id == 'c2')
@@ -238,10 +239,10 @@
                             @include('frontend.preview.components.departments')
                         @elseif($component_id == 'c26')
                             @include('frontend.preview.components.program')
-                        @elseif($component_id == 'c27')
-                            @include('frontend.preview.components.laboratory')
-                        @elseif($component_id == 'c28')
-                            @include('frontend.preview.components.clubs')
+                        {{-- @elseif($component_id == 'c27')
+                            @include('frontend.preview.components.laboratory') --}}
+                        {{-- @elseif($component_id == 'c28')
+                            @include('frontend.preview.components.clubs') --}}
                         @elseif($component_id == 'c29')
                             @include('frontend.preview.components.officers')
                         @elseif($component_id == 'c30')
@@ -252,20 +253,20 @@
                             @include('frontend.preview.components.office_banner')
                         @elseif($component_id == 'c33')
                             @include('frontend.preview.components.all_officer')
-                        @elseif($component_id == 'c34')
+                        {{-- @elseif($component_id == 'c34')
                             @include('frontend.preview.components.club_overview')
                         @elseif($component_id == 'c35')
                             @include('frontend.preview.components.about_club')
                         @elseif($component_id == 'c36')
-                            @include('frontend.preview.components.club_activities')
+                            @include('frontend.preview.components.club_activities') --}}
                         @elseif($component_id == 'c37')
                             @include('frontend.preview.components.album')
-                        @elseif($component_id == 'c38')
+                        {{-- @elseif($component_id == 'c38')
                             @include('frontend.preview.components.club_team_member')
                         @elseif($component_id == 'c39')
                             @include('frontend.preview.components.club_member')
                         @elseif($component_id == 'c40')
-                            @include('frontend.preview.components.club_moderator')
+                            @include('frontend.preview.components.club_moderator') --}}
                         @endif
                     @endif
                 </div>
@@ -285,6 +286,7 @@
 
             <div class="{{ @$json_class2['layout'] }}" data-aos="{{ @$json_class2['fade'] }}" style="{{ @$component2->cssPreview }} {{ @$component2->custom_css}}">
                 @if ($component_type == '0')
+               
                 <div>
                     {!! @$component2->long_descriptions !!}
                     @if (!empty($component2->files) && file_exists(public_path('upload/themes/'.$component2->files)))

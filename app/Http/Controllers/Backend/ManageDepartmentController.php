@@ -29,7 +29,7 @@ class ManageDepartmentController extends Controller
         $department_head = false;
         $data['faculty_head'] = $this->ProfileService->getFacultyHead(Auth::user()->profile_id);
         $data['department_head'] = $this->ProfileService->getDepartmentHead(Auth::user()->profile_id);
-        // dd($data['department_head']);
+        // dd($data['faculty_head']);
         if (isset($data['faculty_head']) && count($data['faculty_head']) > 0) {
             $faculties = Faculty::where('id', $data['faculty_head'][0]->id)->get();
         } elseif (isset($data['department_head']) && count($data['department_head']) > 0) {

@@ -60,6 +60,7 @@
 
                                 @foreach ($faculties as $faculty)
                                     @php
+                                    
                                         if($department_head){
                                             $departmentInfos = \App\Models\Department::where('profile_id', Auth::user()->profile_id)->get();
                                         } else {
@@ -69,9 +70,17 @@
                                     @endphp
                                     <tr>
                                         <td colspan="5" style="padding:15px;font-weight: bold;color: #3f8b62;">
+                                          
                                             {{ isset($faculty->name) ? $faculty->name : '' }} :
                                         </td>
                                     </tr>
+                                    @if ($departmentInfos->isEmpty())
+                                        <tr>
+                                            <td colspan="5" class="text-center text-danger">
+                                                @lang('No Department Found')
+                                            </td>
+                                        </tr>
+                                    @endif
                                     @foreach ($departmentInfos as $dept)
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>

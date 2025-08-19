@@ -1,7 +1,7 @@
 {{-- @extends('frontend.landing') --}}
 @extends('frontend.layouts.master-landing')
 @php
-    $page_title = 'Departments';
+    $page_title = 'All Subjects';
 @endphp
 @section('title')
     {{ $page_title }}
