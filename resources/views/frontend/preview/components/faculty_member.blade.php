@@ -1,7 +1,7 @@
 <div class="p-2">
     
     <div class="d-flex justify-content-between align-items-end">
-        <h1 class="text-uppercase mb-0 home-content-heading custom-font-titillium-web">Faculty Members</h1>
+        <h1 class="text-uppercase mb-0 home-content-heading custom-font-titillium-web">Department Members</h1>
         <a class="my-auto home-content-heading custom-font-titillium-web" href="{{ route('department_all_faculties', $department->id) }}">All</a>
     </div>
 
