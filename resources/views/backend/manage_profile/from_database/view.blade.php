@@ -45,7 +45,7 @@
               <thead>
                 <tr>
                   <th>@lang('ID')</th>
-                  <th>@lang('Butext No.')</th>
+                  {{-- <th>@lang('College ID')</th> --}}
                   <th>@lang('Name')</th>
                   <th>@lang('Email')</th>
                   {{-- <th>@lang('URL')</th> --}}
@@ -82,7 +82,7 @@
               @foreach ($profiles as $profile )
                <tr>
                   <td>{{@$profile['id']}}</td>
-                  <td>{{@$profile['bup_no']}}</td>
+                  {{-- <td>{{@$profile['bup_no']}}</td> --}}
                   <td>{{@$profile['nameEn']}}</td>
                   <td>{{@$profile['email']}}</td>
                   {{-- <td>
