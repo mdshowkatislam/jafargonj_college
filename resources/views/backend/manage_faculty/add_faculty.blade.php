@@ -47,12 +47,12 @@
                 <div class="card-header">
                     <h5>
                         @if (isset($editData))
-                            @lang('Faculty') @lang('Update')
+                            @lang('Department') @lang('Update')
                         @else
-                            @lang('Faculty') @lang('Add')
+                            @lang('Department') @lang('Add')
                         @endif
                         <a class="btn btn-sm btn-info float-right"
-                           href="{{ route('setup.manage_faculty') }}"><i class="fa fa-list"></i> @lang('Faculty')
+                           href="{{ route('setup.manage_faculty') }}"><i class="fa fa-list"></i> @lang('Department')
                             @lang('List')</a>
                     </h5>
                 </div>

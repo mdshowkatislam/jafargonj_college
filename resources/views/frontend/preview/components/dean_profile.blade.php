@@ -8,7 +8,7 @@
             <div class="text-center">
                 <a href="{{ route('faculty_member_head.details', @$faculty_head->profile_id) }}" class="text-dark fw-bold fs-6 mb-0 lh-sm faculty-title">{{ @$faculty_head->profile->nameEn }}</a>
                 {{--  <a href="{{ route('faculty_member.details', @$faculty_head->profile_id) }}" class="text-dark fw-bold fs-5 mb-0 lh-sm faculty-title">{{ @$faculty_head->profile->nameEn }}</a>  --}}
-                <p class="fw-bold common-font-color fs-6 mb-1  custom-font-titillium-web">Dean</p>
+                <p class="fw-bold common-font-color fs-6 mb-1  custom-font-titillium-web">Professor</p>
                 {{-- <p class="fw-bold common-font-color fs-6 mb-1 pt-2 custom-font-titillium-web">{{ @$faculty_head->profile->designation }}</p> --}}
             </div>
         @endif

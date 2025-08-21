@@ -1,7 +1,7 @@
 <!-- ===== slider section start ===== -->
 @extends('frontend.layouts.master-landing')
 @php
-    $page_title = 'Chairman of the Departments';
+    $page_title = 'Lecturer of the Classes';
 @endphp
 @section('title')
     {{ $page_title }}
@@ -68,7 +68,7 @@
                                         {{ $item->profile->nameEn }}
                                     </h5>
                                     <p class="text-center common-font-color fs-6 custom-font-titillium-web my-0 fw-bold" style="color: #00c5bf;">
-                                        Chairman
+                                        Lecturer
                                     </p>
                                     <p class="text-center common-font-color fs-6 custom-font-titillium-web">
                                         {{ @$item->name }}

@@ -120,7 +120,7 @@
                     <hr>
                     <p class="d-flex justify-content-start align-items-center"><i
                             class="bi bi-geo-alt text-primary fs-3 mx-2 "></i>
-                            92 Shaheed Tajuddin Ahmed Avenue Tejgaon Industrial Area, Dhaka - 1208, Bangladesh</p>
+                            Gangamandal-3531,Jafargonj, Debidwar,Cumilla - 3600</p>
                 </div>
             </div>
         </div>

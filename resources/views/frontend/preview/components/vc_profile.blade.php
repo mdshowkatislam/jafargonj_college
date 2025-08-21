@@ -1,6 +1,7 @@
 <div class="equal-height aos-init features">
     <div class="item">
         @if (@$vcInfo->profile)
+     
         <a href="{{ route('vc_info') }}">
             <div style="height: auto; box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;" class="info text-center pt-5 pb-4">
                 <p class="text-center">

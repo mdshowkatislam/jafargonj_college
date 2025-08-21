@@ -10,7 +10,7 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">@lang('Home')</a></li>
-                        <li class="breadcrumb-item active">@lang('Department')</li>
+                        <li class="breadcrumb-item active">@lang('Subject')</li>
                     </ol>
                 </div>
             </div>
@@ -34,13 +34,13 @@
             <div class="col-md-12">
                 <div class="card card-outline card-primary">
                     <div class="card-header">
-                        <h5>@lang('Department') @lang('List')
+                        <h5>@lang('Subject') @lang('List')
                             <a class="btn btn-sm btn-success float-right d-none"
                                 href="{{ route('setup.manage_department.new_department_from_api') }}"><i
                                     class="fa fa-plus-circle"></i> @lang('New Department') @lang('from Api')</a>
                             @if(!$department_head)
                             <a class="btn btn-sm btn-primary float-right" href="{{ route('setup.manage_department.add') }}"
-                                style="margin-right: 2px;"><i class="fa fa-plus-circle"></i> @lang('Department')
+                                style="margin-right: 2px;"><i class="fa fa-plus-circle"></i> @lang('Subject')
                                 @lang('Add')</a>
                             @endif
                         </h5>
@@ -50,7 +50,7 @@
                             <thead>
                                 <tr>
                                     <th scope="row">@lang('SL')</th>
-                                    <th>@lang('Department Name')</th>
+                                    <th>@lang('Subject Name')</th>
                                     {{-- <th>@lang('Ucam Department ID')</th> --}}
                                     <th>@lang('Status')</th>
                                     <th style="width:10%">@lang('Action')</th>

@@ -78,7 +78,7 @@
                                         {{ $item->profile->nameEn }}
                                     </h5>
                                     <p class="text-center common-font-color fs-6 custom-font-titillium-web my-0 fw-bold" style="color: #00c5bf;">
-                                        Dean
+                                        Professor
                                     </p>
                                     <p class="text-center common-font-color fs-6 custom-font-titillium-web">
                                         {{ @$item->name }}

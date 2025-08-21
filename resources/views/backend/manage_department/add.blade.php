@@ -24,7 +24,7 @@
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">@lang('Home')</a></li>
-                        <li class="breadcrumb-item active">@lang('Department')</li>
+                        <li class="breadcrumb-item active">@lang('Subject')</li>
                     </ol>
                 </div>
             </div>
@@ -37,12 +37,12 @@
                 <div class="card-header">
                     <h5>
                         @if (isset($editData))
-                            @lang('Department') @lang('Update')
+                            @lang('Subject') @lang('Update')
                         @else
-                            @lang('Department') @lang('Add')
+                            @lang('Subject') @lang('Add')
                         @endif
                         <a class="btn btn-sm btn-info float-right"
-                           href="{{ route('setup.manage_department') }}"><i class="fa fa-list"></i> @lang('Department')
+                           href="{{ route('setup.manage_department') }}"><i class="fa fa-list"></i> @lang('Subject')
                             @lang('List')</a>
                     </h5>
                 </div>

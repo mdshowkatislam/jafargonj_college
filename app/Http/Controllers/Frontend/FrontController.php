@@ -173,6 +173,7 @@ class FrontController extends Controller
 
     public function index()
     {
+
         $page_id     = 1;
         $page_tab_id = 1;
         $id          = 1;
@@ -751,6 +752,7 @@ class FrontController extends Controller
         //$data['chancellor'] = $this->message->getMessageFromHead(3, 4);
         $data['banner'] = $this->bannerService->bannerByRefId(1);
         $data['vc_message'] = Page::where('title', 'Chancellor')->first();
+        
         return view('frontend.about.chancellor', $data);
     }
 

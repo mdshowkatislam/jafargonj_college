@@ -31,10 +31,10 @@
     <div class="col-md-12">
       <div class="card card-outline card-primary">
         <div class="card-header">
-          <h5>@lang('Faculty') @lang('List')
+          <h5>@lang('Department') @lang('List')
             <a class="btn btn-sm btn-success float-right d-none" href="{{ route('setup.manage_faculty.new_faculty_from_api') }}"><i class="fa fa-list"></i> @lang('New Faculty') @lang('from Api')</a>
             @if(!$faculty_head)
-            <a class="btn btn-sm btn-primary float-right" href="{{ route('setup.manage_faculty.add') }}" style="margin-right: 2px;"><i class="fa fa-plus-circle"></i> @lang('Faculty') @lang('Add')</a>
+            <a class="btn btn-sm btn-primary float-right" href="{{ route('setup.manage_faculty.add') }}" style="margin-right: 2px;"><i class="fa fa-plus-circle"></i> @lang('Department') @lang('Add')</a>
             @endif
           </h5>
         </div>
@@ -43,7 +43,7 @@
               <thead>
                 <tr>
                   <th>@lang('SL')</th>
-                  <th>@lang('Faculty Name')</th>
+                  <th>@lang('Department Name')</th>
                   {{-- <th>@lang('Ucam Faculty ID')</th> --}}
                   <th>@lang('Image')</th>
                   <th>@lang('Status')</th>

@@ -177,7 +177,7 @@
                         @include('frontend.preview.components.form_template')
                     @endif
                     @elseif($component_type == '2')
-                    
+                   
                         @if ($component_id == 'c1')
                             @include('frontend.preview.components.slider')
                         @elseif($component_id == 'c2')

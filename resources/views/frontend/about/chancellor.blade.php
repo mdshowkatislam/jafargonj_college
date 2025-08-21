@@ -17,16 +17,17 @@
                 <div class="row g-0 pb-5">
                     <div class="col-sm-12 col-md-6 col-lg-6 col-xl-3 vc_profile_img">
                         @if (@$vcInfo->profile->id)
+                      
                         <img style="width: -webkit-fill-available;" class="img-thumbnail" alt="VC Sir" src="{{ @$vcInfo->profile->photo ? asset('upload/profiles/' . @$vcInfo->profile->photo) : @$vcInfo->profile->photo_path }}" onerror="this.onerror=null;this.src='{{ asset('dummy/profile_dummy.png') }}';" />
                         @else
-                        <img class="" style="width: 65%;" alt="VC Sir" src="{{ asset('upload/profiles/chancellors.jpeg') }}" onerror="this.onerror=null;this.src='{{ asset('dummy/profile_dummy.png') }}';" />
+                        <img class="" style="width: 65%;" alt="VC Sir" src="{{ asset('upload/profiles/principal.jpeg') }}" onerror="this.onerror=null;this.src='{{ asset('dummy/profile_dummy.png') }}';" />
                         @endif
                     </div>
 
                     <div class="col-sm-12 col-md-6 col-lg-6 col-xl-9">
                         <div class="card-body">
                             <div class="vc_profile_meta mt-5">
-                                <h2 class="card-title" style="color: #009999;">Md Shafikur Rahman</h2>
+                                <h2 class="card-title" style="color: #009999;">Mrs. Jahanara Begum</h2>
                                 <h4 class="card-text">Principal{{ @$vcProfile->profile->designation }}</h4>
                                 <h5 class="card-text mb-2">Jafargonj degree college</h5>
                             </div> 
