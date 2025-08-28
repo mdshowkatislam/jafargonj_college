@@ -53,6 +53,7 @@
                 $designations1  = @$name->designations ?? '';
                 $designations2  = @$name->additional_charge ?? '';
                 $designations3  = @$name->additional_designation ?? '';
+                // dd($item)
 
             @endphp 
             {{-- @if ($is_active_profile) --}}
@@ -84,7 +85,7 @@
                                     </h5>
                                     
                                     <h5 class="card-text text-dark text-center">
-                                        Head
+                                    Incharge of {{ $item->name}}
                                     </h5>
 
                                     @if(@$designations1)

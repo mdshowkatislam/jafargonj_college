@@ -8,7 +8,7 @@
                 <h3 class="fs-5 fw-bold border-bottom p-1 common-font-color custom-font-titillium-web">
                     {{@$message->title_first_part}}
                 </h3>
-            
+            {{-- @dd($message->profile->id) --}}
 
                 @if(isset($message->profile->id))
                     <div style="text-align: justify !important;">

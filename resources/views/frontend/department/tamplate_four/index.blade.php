@@ -31,7 +31,7 @@
 @extends('frontend.department.tamplate_four.partials.main-second')
 
 @section('content')
-  
+    {{-- @dd($sections) --}}
 @foreach (@$sections as $key => $section)
                 @php
                     $json_class      = json_decode($section->custom_class, true);
@@ -144,6 +144,7 @@
 
 <section class="{{ @$section_layout }}" data-aos="{{ @$section_fade }}" style="{{ @$cssPreview }} {{ @$section->custom_css}}">
     <div class="row">
+      
         @if (!empty(@$section->col1_name))
             <div class="{{ @$col_1 }}">
                 @php
@@ -186,7 +187,6 @@
                             @include('frontend.preview.components.form_template')
                         @endif
                     @elseif($component_type == '2')
-                    
                         @if ($component_id == 'c1')
                             @include('frontend.preview.components.slider')
                         @elseif($component_id == 'c2')

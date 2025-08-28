@@ -52,16 +52,12 @@
             <h3 class="my-font form-title fs-4">
               <i class="fas fa-globe"></i> Web:
             </h3>
-            <p>Web: https://butex.edu.bd</p>
+            <p>Web: http://jafargonjcollege.nanoit.biz/</p>
           </div>
         </div>
       </div>
       <div class="col-12 col-sm-7">
-        <iframe
-          src="https://www.google.com/maps/embed/v1/place?q=butex&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
-          width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d228.5551417642662!2d91.05431184649849!3d23.572671489141968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37546ffed6ec1089%3A0x5f61560e28eee17c!2sJafargonj%20Mir%20Abdul%20Gafur%20College!5e0!3m2!1sen!2sbd!4v1756121740129!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         
       </div>
     </div>

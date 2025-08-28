@@ -31,12 +31,13 @@ class DepartmentService implements IService
 
     public static function DepartmentList($data = ['faculty_id' => null])
     {
-        $where = [];
-        if (@$data['faculty_id']) {
-            $where[] = ['faculty_id', '=', $data['faculty_id']];
+        $query=Department::where('status', 1);
+        if(!empty($data['faculty_id'])){
+            $query->where('faculty_id', $data['faculty_id'])->
+            orWhere('faculty_id', '=', 0)->
+            orWhere( 'is_common', '=', 1 );
         }
-        $deparment_list = Department::where($where)->where('status', 1)->get();
-        return $deparment_list;
+        return $query->get();   
     }
     /**
      * Get all data

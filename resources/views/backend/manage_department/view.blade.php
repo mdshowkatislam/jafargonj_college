@@ -57,7 +57,43 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                {{--++++++++++ Common Dpt ++++++++++--}}
+                                @php
+                                    if($department_head){
+                                        $departmentInfos = \App\Models\Department::where('profile_id', Auth::user()->profile_id)->where('is_common', 1)->get();
+                                    } else {
+                                        $departmentInfos = \App\Models\Department::where('is_common', 1)->get();
+                                    }
 
+                                @endphp
+                                <tr>
+                                    <td colspan="5" style="padding:15px;font-weight: bold;color: #3f8b62;">
+                                        Common Department :
+                                    </td>
+                                </tr>
+                                @if ($departmentInfos->isEmpty())
+                                    <tr>
+                                        <td colspan="5" class="text-center text-danger">
+                                            @lang('No Department Found')
+                                        </td>
+                                    </tr>
+                                @endif
+                                @foreach ($departmentInfos as $dept)
+                                    <tr>
+                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $dept->name }}</td>
+                                        {{-- <td>{{ $dept->ucam_department_id }}</td> --}}
+                                        <td>{!! $dept->status == 1 ? '<span class="badge badge-success">Active</span>' : '<span class="badge badge-danger">Inactive</span>' !!}</td>
+                                        <td>
+                                            <a class="btn btn-sm btn-primary" title="Edit"
+                                                href="{{ route('setup.manage_department.edit', $dept->id) }}"><i
+                                                    class="fa fa-edit"></i></a>
+
+                                        </td>
+                                    </tr>
+                                @endforeach
+
+                                {{--++++++++++ Dpt Wise Subject ++++++++++--}}
                                 @foreach ($faculties as $faculty)
                                     @php
                                     
@@ -96,6 +132,7 @@
                                         </tr>
                                     @endforeach
                                 @endforeach
+                                {{--++++++++++ End Dpt Wise Subject ++++++++++--}}
                             </tbody>
                         </table>
                     </div>

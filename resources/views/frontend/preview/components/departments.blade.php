@@ -10,6 +10,7 @@
     <div class="position-relative w-100 common-bg-color mt-1" style="height: 4px;"></div>
 
     <div class="row">
+     
         @foreach ($departments as $department)
             <div class="col-lg-4 col-md-6 mt-3">
                 <div class="card rounded-0 overflow-hidden bg-light shadow faculty_department ">

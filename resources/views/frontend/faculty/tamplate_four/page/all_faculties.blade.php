@@ -1,7 +1,7 @@
 @extends('frontend.faculty.tamplate_four.partials.main')
 
 @php
-    $page_title = 'All Faculties';
+    $page_title = 'All Departments';
 @endphp
 @section('title')
     {{ $page_title }}

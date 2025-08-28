@@ -34,8 +34,8 @@
                         <div class="input-group" style="height : 60px;">
                             <input type="hidden" name="faculty_id" id="faculty_id" value="{{$department->faculty_id}}">
                             <input type="hidden" name="department_id" id="department_id" value="{{$department->id}}">
-                            <input type="hidden" name="news_type" id="news_type" value="{{$type}}">
-                            <input type="hidden" name="news_type_id" id="news_type_id" value="{{$news[0]['type']}}">
+                            <input type="hidden" name="news_type" id="news_type" value="{{@$type}}">
+                            <input type="hidden" name="news_type_id" id="news_type_id" value="{{@$news[0]['type']}}">
                             <input type="search" name="search" class="form-control search-box" placeholder="Enter Keywords ..."
                                 aria-label="Search" id="input-field" aria-describedby="search-addon"
                                 style="border-radius: 0; font-size: 20px; background-color: #00c5bf; border: none;" />

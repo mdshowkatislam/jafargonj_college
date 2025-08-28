@@ -113,31 +113,36 @@ class DepartmentController extends Controller
 
     public function departmentHome($id)
     {
+    //    dd($id);
         $type_id     = 1;
         $page_id     = 3;
         $page_tab_id = $id;
+        // dd($page_tab_id );
 
         $data['department']             = $this->DepartmentService->getByID($id);
-
+        
         $data['program_cat']            = $this->programService->programCategory();
         $data['dept_programs']          = $this->programService->departmentWiseProgram($id);
-
+        
         if (@$data['department']->slider_id){
             $data['sliders']            = $this->slider->getByMasterId($data['department']->slider_id);
         }else{
             $data['sliders']            = $this->slider->getByMasterId(1);
         }
-
+        // dd($data['sliders']);   
+        
         //$data['news']                 = $this->NewsEventNoticeServices->getSelectedRange(1, 3);
-        $data['news']                   = $this->NewsEventNoticeServices->getDeptNewsEventsNotice(1, 3, $data['department']->id, $data['department']->faculty_id);
-        $data['events']                 = $this->NewsEventNoticeServices->getDeptNewsEventsNotice(2, 2, $data['department']->id, $data['department']->faculty_id, 1);
-        $data['notices']                = $this->NewsEventNoticeServices->getDeptNewsEventsNotice(3, 5, $data['department']->id, $data['department']->faculty_id);
-
+        // if($data['department']->is_common != 1){
+            $data['news']                   = $this->NewsEventNoticeServices->getDeptNewsEventsNotice(1, 3, $data['department']->id, $data['department']->faculty_id);
+            $data['events']                 = $this->NewsEventNoticeServices->getDeptNewsEventsNotice(2, 2, $data['department']->id, $data['department']->faculty_id, 1);
+            $data['notices']                = $this->NewsEventNoticeServices->getDeptNewsEventsNotice(3, 5, $data['department']->id, $data['department']->faculty_id);
+        // }
+        
         $data['banner']                 = $this->bannerService->getByID($data['department']->banner_id);
         $data['programs']               = $this->programService->departmentWiseProgram($data['department']->id);
-
+        
         $data['faculty_members']        = $this->PersonnelsToFacultyService->departmentMembers($data['department']->id);
-
+        
         $data['clubs']                  = $this->clubService->DepartmentWiseClub($data['department']->id);
         $data['labs']                   = $this->labService->labByDepartment($data['department']->id);
         $data['officer_of_department']  = $this->facultyOfficerService->departmentWiseStaff($data['department']->id);
@@ -146,12 +151,14 @@ class DepartmentController extends Controller
         // $data['modal']                  = $this->landingModalService->getModalByType(3);
         $data['modal']                = $this->landingModalService->getModalByTypeId(3, $id);
         $data['message']                = $this->messaService->getMessageFromHead(2, $id);
-        // dd( $data['message']   );
+        // dd($data['message']   );
         $data['infos']                  = $this->researchService->ResearchByDepartment($data['department']->id);
         //$data['infos']                  = $this->researchService->ResearchByDepartment($data['department']->id);
-  
-        $data['faculty']                = $this->FacultyService->getByID($data['department']->faculty_id);
-        
+        if($data['department']->is_common != 1){
+            $data['faculty']                = $this->FacultyService->getByID($data['department']->faculty_id);
+        }
+        // dd($data['department']   );
+
         $data['program_cat']            = $this->FacultyService->programCategory();
         $data['faculty_programs']       = $this->programService->facultyWiseProgram($id);
 
@@ -159,11 +166,12 @@ class DepartmentController extends Controller
 
         $data['faculty_head']           = $this->FacultyService->facultyHead(['faculty_id' => $id]);
         // $data['faculty_tamplate']    = $this->FacultyService->facultyTamplate(['faculty_id' => $id]);
+       
 
         $data['faculty_name']           = $this->FacultyService->facultyName(['faculty_id' => $id]);
-        $data['faculty_head_message']   = $this->message->getMessageFromHead($type_id, $data['faculty']->id);
+        $data['faculty_head_message']   = $this->message->getMessageFromHead($type_id, $data['faculty']->id ?? 0);
 
-        $data['officer_of_dean_office'] = $this->facultyOfficerService->facultyWiseStaff($data['faculty']->id);
+        $data['officer_of_dean_office'] = $this->facultyOfficerService->facultyWiseStaff($data['faculty']->id ?? 0);
 
         $data['vcInfo']               = $this->message->getMessageFromHead(3,1);
         $data['aboutUni']             = About::first();
@@ -179,7 +187,7 @@ class DepartmentController extends Controller
         $data['galleryCategory']      = GalleryCategory::where('sub_category', 2)->where('ref_id', $id)->where('status', 1)->get(); 
 
         $data['sections'] = CmsSection::with('lastComponent')->where('page_id', $page_id)->where('page_tab_id', $page_tab_id)->where('status', 1)->orderBy('section_order', 'asc')->get();
-        //variables for menus
+        // dd($data['sections']);
         $data['top_menus'] = FrontendMenu::where('menu_type_id', $data['department']['top_menu'])->where('status', 1)->get();
 
         $data['all_nav'] = FrontendMenu::where('menu_type_id', $data['department']['nav_menu'])->where('status', 1)->get();
@@ -188,7 +196,7 @@ class DepartmentController extends Controller
         $data['childs'] =   $data['parents']->flatMap(function ($item) {
             return FrontendMenu::where('parent_id', $item->rand_id)->get();
         });
-        // dd($data['childs']);
+       
         session(['deprt_id' => $data['department']->id]);
         $data['dep_id'] = request()->id;
 

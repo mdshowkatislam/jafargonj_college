@@ -22,11 +22,15 @@ class PersonnelsToFacultyController extends Controller
         $data['is_department_head'] = false;
         $data['faculty_head'] = $this->ProfileService->getFacultyHead(Auth::user()->profile_id);
         $data['department_head'] = $this->ProfileService->getDepartmentHead(Auth::user()->profile_id);
+
         if (isset($data['faculty_head']) && count($data['faculty_head']) > 0){
+             
             $data['profiles'] = PersonnelsToFaculty::with('profile')->where('faculty_id', $data['faculty_head'][0]->id)->get();
         } elseif (isset($data['department_head']) && count($data['department_head']) > 0) {
+          
             $data['profiles'] = PersonnelsToFaculty::with('profile')->where('department_id', $data['department_head'][0]->id)->get();
         } else {
+             
             $data['profiles'] = PersonnelsToFaculty::with('profile')->get();
         }
 
@@ -42,12 +46,13 @@ class PersonnelsToFacultyController extends Controller
 
     public function Store(Request $request)
     {
-        // return $request->all();
+      
         $request->validate([
             'profile_id' => 'required',
             'faculty_id' => 'required',     
             'sort_order' => 'required|numeric'
         ]);
+        
         $params = $request->all();
         PersonnelsToFaculty::create($params);
 

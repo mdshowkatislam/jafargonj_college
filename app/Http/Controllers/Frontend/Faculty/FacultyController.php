@@ -365,7 +365,7 @@ class FacultyController extends Controller
             $data['banner'] = $this->bannerService->bannerByRefId(1);
         }
 
-        // dd($data);
+        // dd(  $data['departments'] );
 
         // if ($data['faculty_tamplate'] == 1) {
         //     return view('frontend.faculty.tamplate_one.page.all_faculties', $data);

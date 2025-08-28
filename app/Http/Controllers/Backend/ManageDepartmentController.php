@@ -30,7 +30,7 @@ class ManageDepartmentController extends Controller
         $department_head = false;
         $data['faculty_head'] = $this->ProfileService->getFacultyHead(Auth::user()->profile_id);
         $data['department_head'] = $this->ProfileService->getDepartmentHead(Auth::user()->profile_id);
-        // dd($data['department_head']);
+
         if (isset($data['faculty_head']) && count($data['faculty_head']) > 0) {
             $faculties = Faculty::where('id', $data['faculty_head'][0]->id)->get();
         } elseif (isset($data['department_head']) && count($data['department_head']) > 0) {
@@ -84,6 +84,7 @@ class ManageDepartmentController extends Controller
     public function Store(Request $request)
     {
     
+    
         $request->validate([
             'name' => 'required|unique:faculties|regex:/^[a-zA-Z\s]+$/',
             'contact' => 'required|numeric',
@@ -96,9 +97,10 @@ class ManageDepartmentController extends Controller
             'faculty_id.required' => 'You have to choose Faculty',
             'name.regex' => 'name field must contain characters only',
         ]);
-
+// dd($request->all());    
         $data = new Department();
         $data->faculty_id = $request->faculty_id;
+        $data->is_common = $request->faculty_id == 0 ? 1 : 0;
         $data->name = $request->name;
         $data->ucam_department_id = $request->ucam_department_id;
         $data->about = $request->about;
@@ -131,8 +133,8 @@ class ManageDepartmentController extends Controller
         $message->category_id = $data->id;
         $message->profile_id = $data->profile_id;
         $message->status = 0;
-        $message->title_first_part = 'Message From Chairman';
-        $message->short_description = 'Message From Chairman';
+        $message->title_first_part = 'Message From Department Head';
+        $message->short_description = 'Message From Department Head';
         $message->save();
 
         return redirect()->route('setup.manage_department')->with('success', 'Data Saved successfully');
@@ -224,8 +226,8 @@ class ManageDepartmentController extends Controller
             $message->category_id = $data->id;
             $message->profile_id = $data->profile_id;
             $message->status = 0;
-            $message->title_first_part = 'Message From Chairman';
-            $message->short_description = 'Message From Chairman';
+            $message->title_first_part = 'Message From Department Head';
+            $message->short_description = 'Message From Department Head';
         }
         $message->save();
 
